@@ -134,7 +134,8 @@ def menu():
         remaining()
     if action == "exit":
         breakpoint()
-    menu()
+    else:
+        menu()
 
 
 def fill():
