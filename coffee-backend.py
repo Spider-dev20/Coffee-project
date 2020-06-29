@@ -63,6 +63,27 @@ def calculation_cappuccino():
     global amount_beans
     global amount_disposable_cups
     global amount_money
+    water_capp = amount_water // 200
+    milk_capp = amount_milk // 100
+    beans_capp = amount_beans // 12
+    cups_capp = amount_disposable_cups // 1
+    min_capp = min([water_capp, milk_capp, beans_capp, cups_capp])
+    if milk_capp >= 1:
+        amount_water -= 200
+        amount_milk -= 100
+        amount_beans -= 12
+        amount_disposable_cups -= 1
+        amount_money += 6
+        print("I have enough resources, making you a coffee!")
+    elif water_capp < 1:
+        print("Sorry, not enough water!")
+    elif milk_capp < 1:
+        print("Sorry, not enough milk!")
+    elif beans_capp < 1:
+        print("Sorry, not enough beans!")
+    elif cups_capp < 1:
+        print("Sorry, not enough cups!")
+
 
 
 
