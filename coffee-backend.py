@@ -13,7 +13,8 @@ def calculation_espresso():
     global amount_money
     water_esp = amount_water // 200
     beans_esp = amount_beans // 16
-    min_esp = min([beans_esp, water_esp])
+    cups = amount_disposable_cups // 1
+    min_esp = min([beans_esp, water_esp, cups])
     if min_esp >= 1:
         amount_water -= 250
         amount_milk -= 0
@@ -25,6 +26,8 @@ def calculation_espresso():
         print("Sorry, not enough water!")
     elif beans_esp <= 1:
         print("Sorry, not enough beans")
+    elif cups <= 1:
+        print("Sorry, not enough cups")
     print("")
 
 
