@@ -1,14 +1,10 @@
 amount_water = 400
-
 amount_milk = 540
-
 amount_beans = 120
-
 amount_disposable_cups = 9
-
 amount_money = 550
-
 espresso_water = 250
+
 
 
 def at_least_amount():
@@ -43,6 +39,8 @@ def buy():
 
     if Coffee == "1":
         amount_water -= 250
+        if amount_water < 0:
+            print("")
         amount_milk -= 0
         amount_beans -= 16
         amount_disposable_cups -= 1
