@@ -5,6 +5,8 @@ amount_disposable_cups = 9
 amount_money = 550
 espresso_water = 250
 
+import sys
+
 def calculation_espresso():
     global amount_water
     global amount_milk
@@ -85,9 +87,6 @@ def calculation_cappuccino():
         print("Sorry, not enough cups!")
 
 
-
-
-
 def remaining():
     print('The coffee machine has:')
     print(amount_water, 'of water')
@@ -96,7 +95,6 @@ def remaining():
     print(amount_disposable_cups, 'of disposable cups')
     print(amount_money, 'of money')
     print('')
-
 
 
 def buy():
@@ -133,7 +131,7 @@ def menu():
     if action == "remaining":
         remaining()
     if action == "exit":
-        breakpoint()
+        sys.exit(0)
     else:
         menu()
 
