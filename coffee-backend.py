@@ -31,9 +31,6 @@ def calculation_espresso():
     print("")
 
 
-
-
-
 def remaining():
     print('The coffee machine has:')
     print(amount_water, 'of water')
@@ -57,19 +54,20 @@ def buy():
     if Coffee == "1":
         calculation_espresso()
 
-
     if Coffee == "2":
         amount_water -= 350
         amount_milk -= 75
         amount_beans -= 20
         amount_disposable_cups -= 1
         amount_money += 7
+
     if Coffee == "3":
         amount_water -= 200
         amount_milk -= 100
         amount_beans -= 12
         amount_disposable_cups -= 1
         amount_money += 6
+
     if Coffee == "back":
         menu()
 
