@@ -7,6 +7,7 @@ espresso_water = 250
 
 import sys
 
+
 def calculation_espresso():
     global amount_water
     global amount_milk
@@ -31,6 +32,7 @@ def calculation_espresso():
     elif cups <= 1:
         print("Sorry, not enough cups!")
     print("")
+
 
 def calculation_Latte():
     global amount_water
@@ -58,6 +60,7 @@ def calculation_Latte():
         print("Sorry, not enough beans!")
     elif cups_latte < 1:
         print("Sorry, not enough cups!")
+
 
 def calculation_cappuccino():
     global amount_water
@@ -93,7 +96,7 @@ def remaining():
     print(amount_milk, 'of milk')
     print(amount_beans, 'of coffee beans')
     print(amount_disposable_cups, 'of disposable cups')
-    print(amount_money, 'of money')
+    print("$", amount_money, " of money", sep="")
     print('')
 
 
@@ -155,9 +158,11 @@ def fill():
 
 def take():
     global amount_money
-    print("I gave you $", amount_money)
+    # print("I gave you", "$" amount_money)
+    print("I gave you $", amount_money, sep="")
     amount_money = 0
     menu()
 
 
-menu()
+
+    menu()
