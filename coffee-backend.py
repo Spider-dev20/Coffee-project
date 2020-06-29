@@ -30,6 +30,27 @@ def calculation_espresso():
         print("Sorry, not enough cups")
     print("")
 
+def calculation_Latte():
+    global amount_water
+    global amount_milk
+    global amount_beans
+    global amount_disposable_cups
+    global amount_money
+    water_latte = amount_water // 350
+    milk_latte = amount_milk // 75
+    beans_latte = amount_beans // 20
+    cups_latte = amount_disposable_cups // 1
+    min_latte = min([water_latte, milk_latte, beans_latte, cups_latte])
+    if min_latte > 1:
+        amount_water -= 350
+        amount_milk -= 75
+        amount_beans -= 20
+        amount_disposable_cups -= 1
+        amount_money += 7
+        print("I have enough resources, making you a coffee!")
+    elif
+
+
 
 def remaining():
     print('The coffee machine has:')
