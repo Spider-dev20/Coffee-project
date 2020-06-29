@@ -5,6 +5,23 @@ amount_disposable_cups = 9
 amount_money = 550
 espresso_water = 250
 
+def calculation():
+    global amount_water
+    global amount_milk
+    global amount_beans
+    global amount_disposable_cups
+    global amount_money
+    water_esp = amount_water // 200
+    beans_esp = amount_beans // 16
+    min_esp = min([beans_esp, water_esp])
+    if min_esp >= 1:
+        print("I have enough resources, making you a coffee!")
+    elif water_esp <= 1:
+        print("Sorry, not enough water!")
+    elif beans_esp <= 1:
+        print("Sorry, not enough beans")
+
+
 
 
 def at_least_amount():
