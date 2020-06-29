@@ -25,9 +25,9 @@ def calculation_espresso():
     elif water_esp <= 1:
         print("Sorry, not enough water!")
     elif beans_esp <= 1:
-        print("Sorry, not enough beans")
+        print("Sorry, not enough beans!")
     elif cups <= 1:
-        print("Sorry, not enough cups")
+        print("Sorry, not enough cups!")
     print("")
 
 def calculation_Latte():
@@ -48,7 +48,22 @@ def calculation_Latte():
         amount_disposable_cups -= 1
         amount_money += 7
         print("I have enough resources, making you a coffee!")
-    elif
+    elif water_latte < 1:
+        print("Sorry, not enough water!")
+    elif milk_latte < 1:
+        print("Sorry, not enough milk!")
+    elif beans_latte < 1:
+        print("Sorry, not enough beans!")
+    elif cups_latte < 1:
+        print("Sorry, not enough cups!")
+
+def calculation_cappuccino():
+    global amount_water
+    global amount_milk
+    global amount_beans
+    global amount_disposable_cups
+    global amount_money
+
 
 
 
