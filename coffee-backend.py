@@ -45,7 +45,7 @@ def calculation_Latte():
     beans_latte = amount_beans // 20
     cups_latte = amount_disposable_cups // 1
     min_latte = min([water_latte, milk_latte, beans_latte, cups_latte])
-    if min_latte > 1:
+    if min_latte >= 1:
         amount_water -= 350
         amount_milk -= 75
         amount_beans -= 20
@@ -73,7 +73,7 @@ def calculation_cappuccino():
     beans_capp = amount_beans // 12
     cups_capp = amount_disposable_cups // 1
     min_capp = min([water_capp, milk_capp, beans_capp, cups_capp])
-    if milk_capp >= 1:
+    if min_capp >= 1:
         amount_water -= 200
         amount_milk -= 100
         amount_beans -= 12
@@ -122,21 +122,8 @@ def buy():
         menu()
 
 
-def menu():
-    print("Write action (buy, fill, take, remaining, exit):")
-    action = input()
-    if action == "buy":
-        buy()
-    if action == "fill":
-        fill()
-    if action == "take":
-        take()
-    if action == "remaining":
-        remaining()
-    if action == "exit":
-        sys.exit(0)
-    else:
-        menu()
+
+
 
 
 def fill():
@@ -158,10 +145,28 @@ def fill():
 
 def take():
     global amount_money
-    # print("I gave you", "$" amount_money)
     print("I gave you $", amount_money, sep="")
     amount_money = 0
     menu()
+
+
+def menu():
+    print("Write action (buy, fill, take, remaining, exit):")
+    action = input()
+    while action not in ("buy", "fill", "take", "remaining", "exit"):
+        print("Write action (buy, fill, take, remaining, exit):")
+        action = input()
+
+    if action == "buy":
+        buy()
+    if action == "fill":
+        fill()
+    if action == "take":
+        take()
+    if action == "remaining":
+        remaining()
+    if action == "exit":
+        sys.exit(0)
 
 
 menu()
