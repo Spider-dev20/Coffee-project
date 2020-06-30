@@ -164,5 +164,4 @@ def take():
     menu()
 
 
-
-    menu()
+menu()
