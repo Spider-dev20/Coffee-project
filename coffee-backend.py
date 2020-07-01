@@ -98,6 +98,7 @@ def remaining():
     print(amount_disposable_cups, 'of disposable cups')
     print("$", amount_money, " of money", sep="")
     print('')
+    menu()
 
 
 def buy():
@@ -120,10 +121,7 @@ def buy():
 
     if Coffee == "back":
         menu()
-
-
-
-
+    menu()
 
 
 def fill():
