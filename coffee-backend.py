@@ -98,7 +98,6 @@ def remaining():
     print(amount_disposable_cups, 'of disposable cups')
     print("$", amount_money, " of money", sep="")
     print('')
-    menu()
 
 
 def buy():
@@ -121,7 +120,7 @@ def buy():
 
     if Coffee == "back":
         menu()
-    menu()
+
 
 
 def fill():
@@ -138,33 +137,58 @@ def fill():
     amount_beans += int(input())
     print('Write how many disposable cups of coffee do you want to add:')
     amount_disposable_cups += int(input())
-    menu()
+
 
 
 def take():
     global amount_money
     print("I gave you $", amount_money, sep="")
     amount_money = 0
-    menu()
 
 
-def menu():
+
+def exit():
+    sys.exit(0)
+
+
+#def menu():
+ #   print("Write action (buy, fill, take, remaining, exit):")
+  #  action = input()
+   # while action not in ("buy", "fill", "take", "remaining", "exit"):
+    #    print("Write action (buy, fill, take, remaining, exit):")
+    #    action = input()
+
+   # if action == "buy":
+   #     buy()
+   # if action == "fill":
+   #     fill()
+   # if action == "take":
+   #     take()
+   # if action == "remaining":
+   #     remaining()
+   # if action == "exit":
+   #     sys.exit(0)
+
+action= ""
+while action != "exit":
     print("Write action (buy, fill, take, remaining, exit):")
     action = input()
-    while action not in ("buy", "fill", "take", "remaining", "exit"):
-        print("Write action (buy, fill, take, remaining, exit):")
-        action = input()
-
     if action == "buy":
         buy()
+        continue
     if action == "fill":
         fill()
+        continue
     if action == "take":
         take()
+        continue
     if action == "remaining":
         remaining()
+        continue
     if action == "exit":
         sys.exit(0)
+    else:
+        continue
 
 
-menu()
+
