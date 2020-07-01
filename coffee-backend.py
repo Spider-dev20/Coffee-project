@@ -118,8 +118,8 @@ def buy():
     if Coffee == "3":
         calculation_cappuccino()
 
-    if Coffee == "back":
-        menu()
+   # if Coffee == "back":
+
 
 
 
