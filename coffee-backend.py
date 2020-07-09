@@ -151,24 +151,6 @@ def exit():
     sys.exit(0)
 
 
-#def menu():
- #   print("Write action (buy, fill, take, remaining, exit):")
-  #  action = input()
-   # while action not in ("buy", "fill", "take", "remaining", "exit"):
-    #    print("Write action (buy, fill, take, remaining, exit):")
-    #    action = input()
-
-   # if action == "buy":
-   #     buy()
-   # if action == "fill":
-   #     fill()
-   # if action == "take":
-   #     take()
-   # if action == "remaining":
-   #     remaining()
-   # if action == "exit":
-   #     sys.exit(0)
-
 action= ""
 while action != "exit":
     print("Write action (buy, fill, take, remaining, exit):")
